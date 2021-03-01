@@ -767,7 +767,7 @@ I (.\FreeRTOS\Include\task.h)(0x5CD62451)
 I (.\FreeRTOS\Include\list.h)(0x5CD62451)
 I (.\FreeRTOS\Include\timers.h)(0x5CD62451)
 I (.\FreeRTOS\Include\stack_macros.h)(0x5CD62451)
-F (.\FunLib\apiLib.c)(0x60094DF5)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I.\FreeRTOS -I.\FreeRTOS\Include -I.\FreeRTOS\Portable -I.\FunLib -I.\Lib\CMSIS -I.\Lib\CMSIS\STM32F10x -I.\Lib\CMSIS\STM32F10x\startup -I.\Lib\STM32F10x_StdPeriph_Driver\inc -I.\Project -I.\TaskManager -I.\Project\log\inc -I.\Project\log\port -I.\Display --C99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -o ".\OBJ\apilib.o" --omf_browse ".\OBJ\apilib.crf" --depend ".\OBJ\apilib.d")
+F (.\FunLib\apiLib.c)(0x6030CE5E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I.\FreeRTOS -I.\FreeRTOS\Include -I.\FreeRTOS\Portable -I.\FunLib -I.\Lib\CMSIS -I.\Lib\CMSIS\STM32F10x -I.\Lib\CMSIS\STM32F10x\startup -I.\Lib\STM32F10x_StdPeriph_Driver\inc -I.\Project -I.\TaskManager -I.\Project\log\inc -I.\Project\log\port -I.\Display --C99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -o ".\OBJ\apilib.o" --omf_browse ".\OBJ\apilib.crf" --depend ".\OBJ\apilib.d")
 I (.\Lib\CMSIS\STM32F10x\stm32f10x.h)(0x54FFA9A8)
 I (.\Lib\CMSIS\core_cm3.h)(0x54FFA9A6)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x50F96150)
@@ -874,7 +874,7 @@ I (.\Project\gpioredef.h)(0x5E7C8569)
 I (.\Display\touch.h)(0x5FB51C06)
 I (.\FunLib\apiLib.h)(0x5FB51871)
 I (TaskManager\TK_TimerController.h)(0x5E7C94BB)
-F (.\TaskManager\TK_DisplayController.c)(0x6009126D)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I.\FreeRTOS -I.\FreeRTOS\Include -I.\FreeRTOS\Portable -I.\FunLib -I.\Lib\CMSIS -I.\Lib\CMSIS\STM32F10x -I.\Lib\CMSIS\STM32F10x\startup -I.\Lib\STM32F10x_StdPeriph_Driver\inc -I.\Project -I.\TaskManager -I.\Project\log\inc -I.\Project\log\port -I.\Display --C99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -o ".\OBJ\tk_displaycontroller.o" --omf_browse ".\OBJ\tk_displaycontroller.crf" --depend ".\OBJ\tk_displaycontroller.d")
+F (.\TaskManager\TK_DisplayController.c)(0x6030CE5E)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I.\FreeRTOS -I.\FreeRTOS\Include -I.\FreeRTOS\Portable -I.\FunLib -I.\Lib\CMSIS -I.\Lib\CMSIS\STM32F10x -I.\Lib\CMSIS\STM32F10x\startup -I.\Lib\STM32F10x_StdPeriph_Driver\inc -I.\Project -I.\TaskManager -I.\Project\log\inc -I.\Project\log\port -I.\Display --C99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -o ".\OBJ\tk_displaycontroller.o" --omf_browse ".\OBJ\tk_displaycontroller.crf" --depend ".\OBJ\tk_displaycontroller.d")
 I (.\Lib\CMSIS\STM32F10x\stm32f10x.h)(0x54FFA9A8)
 I (.\Lib\CMSIS\core_cm3.h)(0x54FFA9A6)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x50F96150)
@@ -1104,7 +1104,7 @@ I (.\Lib\STM32F10x_StdPeriph_Driver\inc\stm32f10x_usart.h)(0x54FFA9A8)
 I (.\Lib\STM32F10x_StdPeriph_Driver\inc\stm32f10x_wwdg.h)(0x54FFA9A8)
 I (.\Lib\STM32F10x_StdPeriph_Driver\inc\misc.h)(0x54FFA9A8)
 I (Project\delay.h)(0x5F65B123)
-F (.\Display\display.c)(0x601CDAAB)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I.\FreeRTOS -I.\FreeRTOS\Include -I.\FreeRTOS\Portable -I.\FunLib -I.\Lib\CMSIS -I.\Lib\CMSIS\STM32F10x -I.\Lib\CMSIS\STM32F10x\startup -I.\Lib\STM32F10x_StdPeriph_Driver\inc -I.\Project -I.\TaskManager -I.\Project\log\inc -I.\Project\log\port -I.\Display --C99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -o ".\OBJ\display.o" --omf_browse ".\OBJ\display.crf" --depend ".\OBJ\display.d")
+F (.\Display\display.c)(0x6030C4C7)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I.\FreeRTOS -I.\FreeRTOS\Include -I.\FreeRTOS\Portable -I.\FunLib -I.\Lib\CMSIS -I.\Lib\CMSIS\STM32F10x -I.\Lib\CMSIS\STM32F10x\startup -I.\Lib\STM32F10x_StdPeriph_Driver\inc -I.\Project -I.\TaskManager -I.\Project\log\inc -I.\Project\log\port -I.\Display --C99 -I C:\Keil\ARM\RV31\INC -I C:\Keil\ARM\CMSIS\Include -I C:\Keil\ARM\Inc\ST\STM32F10x -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -o ".\OBJ\display.o" --omf_browse ".\OBJ\display.crf" --depend ".\OBJ\display.d")
 I (.\Lib\CMSIS\STM32F10x\stm32f10x.h)(0x54FFA9A8)
 I (.\Lib\CMSIS\core_cm3.h)(0x54FFA9A6)
 I (C:\Keil\ARM\ARMCC\bin\..\include\stdint.h)(0x50F96150)

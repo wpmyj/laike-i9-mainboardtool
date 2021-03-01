@@ -43,11 +43,7 @@ void TK_DisplayController( void *pvParameters )
 	
 	for(;;)
 	{
-// 		mMaininf.mSystem.mTestStartTime = api_GetCurrentSystemTime();
-// 		Gui_DrawFont_GBK24(0,122,BLACK,GRAY0,"定位摄像头供电");
-// 		mMaininf.mSystem.mTestStartTime = api_GetCurrentSystemTime();
 		IWDG_ReloadCounter();
-//		Read_Touch();
 		Test_Display();
 	}
 }

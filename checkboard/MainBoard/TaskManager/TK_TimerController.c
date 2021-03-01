@@ -76,52 +76,42 @@ void TK_TimerController( void *pvParameters )
 
 
 
-
+/*****************************************************************************
+ * @name       :void Key_Status_Analyze(void)
+ * @date       :2020-09-19 
+ * @author     :zhengbaiqiu 
+ * @function   :测试模式解析
+ * @parameters :None
+ * @retvalue   :None
+******************************************************************************/
 void Key_Status_Analyze(void)
 {
 	mMaininf.mWork.mWorkI8I9StatusFlag = (mMaininf.mWork.mWorkI9KeyPressFlag << 1) | mMaininf.mWork.mWorkI8KeyPressFlag;
 }
 
-/*-----------------------------------------------------------------------*/
-/* Timing Detection Peripheral                                           */
-/*-----------------------------------------------------------------------*/
-
-
+/*****************************************************************************
+ * @name       :void TimerDetection(void)
+ * @date       :2020-09-19 
+ * @author     :zhengbaiqiu 
+ * @function   :定时检测按键
+ * @parameters :None
+ * @retvalue   :None
+******************************************************************************/
 void TimerDetection(void)
 {
-// 	if(GPIO_ReadInputDataBit(GPIOF,GPIO_Pin_9) == 0)//按键抬起进行测试
-// 	{
-// 		if(mMaininf.mWork.mWorkKeyPressFlag == 0)
-// 		{
-// 			mMaininf.mWork.mWorkKeyCont ++;
-// 			if(mMaininf.mWork.mWorkKeyCont > 3)
-// 			{
-// 				mMaininf.mWork.mWorkKeyCont = 3;
-// 				mMaininf.mWork.mWorkKeyPressFlag1 = 1;
-// 			}
-// 		}
-// 	}
-// 	else
-// 	{
-// 		if(mMaininf.mWork.mWorkKeyPressFlag1 == 1)
-// 		{
-// 			mMaininf.mWork.mWorkKeyPressFlag = 1;
-// 		}
-// 		mMaininf.mWork.mWorkKeyCont = 0;
-// 	}
-	
  	if(GPIO_ReadInputDataBit(GPIOF,GPIO_Pin_9) == 0)//按键按下进行测试    测试按键
 	{
 		if(mMaininf.mWork.mWorkKeyPressFlag == 0)
 		{
-			mMaininf.mWork.mWorkKeyCont ++;
-			if(mMaininf.mWork.mWorkKeyCont > 10)
+			if((mMaininf.mWork.mWorkOldI8I9StatusFlag == 1) || (mMaininf.mWork.mWorkOldI8I9StatusFlag == 2))
 			{
-				mMaininf.mWork.mWorkKeyCont = 10;
-				
-				if((mMaininf.mWork.mWorkI8I9StatusFlag == 1) || (mMaininf.mWork.mWorkI8I9StatusFlag == 2))
+				mMaininf.mWork.mWorkKeyCont ++;
+				if(mMaininf.mWork.mWorkKeyCont > 10)
 				{
+					mMaininf.mWork.mWorkKeyCont = 10;
+					
 					mMaininf.mWork.mWorkKeyPressFlag = 1;
+					
 				}
 			}
 		}

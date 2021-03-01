@@ -13,7 +13,7 @@
 
 /* Project ---------------------------------------------------------------------*/
 #include "bsp.h"
-//#include "delay.h"
+#include "myprint.h"
 #include "apiLib.h"
 
 /* Variable --------------------------------------------------------------------*/
@@ -117,7 +117,7 @@ void RCC_Configure(void)
 	RCC_AHBPeriphClockCmd(RCC_AHBPeriph_DMA1, ENABLE);
 
 	/* Enable APB1 clock */
-	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2 | RCC_APB1Periph_TIM3 | RCC_APB1Periph_TIM4 | 
+	RCC_APB1PeriphClockCmd(RCC_APB1Periph_TIM2 | RCC_APB1Periph_TIM3 | RCC_APB1Periph_TIM4 | RCC_APB1Periph_TIM5 |
 												 RCC_APB1Periph_TIM6 | RCC_APB1Periph_USART2 | RCC_APB1Periph_USART3 | 
 												 RCC_APB1Periph_UART4 | RCC_APB1Periph_UART5 | RCC_APB1Periph_WWDG,ENABLE);
 	
@@ -873,6 +873,7 @@ void prvSetupHardware(void)
 {
 	BSP_Init();
 	Param_Init();
+	//MyPrint_Start();
 }
 
 

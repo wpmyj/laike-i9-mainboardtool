@@ -2038,8 +2038,8 @@ void Display_I9_Test(u8 test_mode,u8 test_cmd,u8 test_status)
 ******************************************************************************/
 void Test_Display(void)
 {
-//	if(mMaininf.mWork.mWorkInitFlag == 1)//初始化成功
-	if(1)
+	if(mMaininf.mWork.mWorkInitFlag == 1)//初始化成功
+// 	if(1)
 	{
 // 		if(mMaininf.mWork.mWorkChecking == 0)//未在检测状态
 // 		{
@@ -2130,22 +2130,10 @@ void Test_Display(void)
 					}
 				}
 			}
-			
-			//Display_Test(mMaininf.mWork.mWorkMODE,mMaininf.mWork.mWorkCMD,mMaininf.mWork.mWorkSTATUS);
 		}
 	}
 	Gui_DrawPoint(0,0,GRAY0);
 	
-	
-// 	DisplayButtonUp(15,38,113,58); //x1,y1,x2,y2
-//  	Gui_DrawFont_GBK16(16,40,YELLOW,GRAY0,"啊啊填充测试");
-//  	DisplayButtonDown(15,68,113,88); //x1,y1,x2,y2
-// 	Gui_DrawFont_GBK16(16,70,BLUE,GRAY0,"文字显示测试");
-
-// 	DisplayButtonUp(15,98,113,118); //x1,y1,x2,y2
-// 	Gui_DrawFont_GBK24(16,100,RED,GRAY0,"防撞沿边下视");
-// 	
-// 	delay_ms(1200);
 }
 
 

@@ -254,25 +254,31 @@ void api_MachinePowerOn(void)
 	mMaininf.mSystem.mPowerOnStartTime = api_GetCurrentSystemTime();
 	
 	mMaininf.mSystem.mReadUartStatusStartTime = api_GetCurrentSystemTime();
-	api_SendCMDData(0,0,1);
+	api_SendCMDData(0,1,0);
 	
 	while(1)
 	{
 		if(api_GetSystemTimePeriod(mMaininf.mSystem.mReadUartStatusStartTime) > 500)
 		{
-			api_SendCMDData(0,0,1);
+			api_SendCMDData(0,1,0);
 			mMaininf.mSystem.mReadUartStatusStartTime = api_GetCurrentSystemTime();
 			
 		}
 		
-//		if(mMaininf.mUart1.mReceiveFlag == 1)            //    接收到反馈
+		#ifndef zbq_Debug
+		if(mMaininf.mUart1.mReceiveFlag == 1)            //    接收到反馈
+		#else
 		if(1)
+		#endif
 		{
 			mMaininf.mUart1.mReceiveFlag = 0;
 			
-//			if((mMaininf.mUart1.ReceiveBuf[0] == 0) && (mMaininf.mUart1.ReceiveBuf[1] == 0) &&
-//			   (mMaininf.mUart1.ReceiveBuf[2] == 1))
+			#ifndef zbq_Debug
+			if((mMaininf.mUart1.ReceiveBuf[0] == 0) && (mMaininf.mUart1.ReceiveBuf[1] == 1) &&
+			   (mMaininf.mUart1.ReceiveBuf[2] == 1))
+			#else
 			if(1)
+			#endif
 			{
 				Gui_DrawFont_GBK24(140,130,BLUE,GRAY0,"初始化OK              ");
 				

@@ -594,17 +594,22 @@ void api_MachinePowerOn(void)
 {
 	mMaininf.mSystem.mPowerOnStartTime = api_GetCurrentSystemTime();
 	
-	/*while(1)
+	#ifdef zbq_Debug
+	mMaininf.mWork.mWorkInitFlag = 1;
+	
+	#else
+	while(1)
 	{
 		if(mMaininf.mUart5.mReceiveFlag == 1)            //    接收到反馈
 		{
 			mMaininf.mUart5.mReceiveFlag = 0;
 			
-			if((mMaininf.mUart5.ReceiveBuf[0] == 0) && (mMaininf.mUart5.ReceiveBuf[1] == 0) &&
-			   (mMaininf.mUart5.ReceiveBuf[2] == 1))
+			if((mMaininf.mUart5.ReceiveBuf[0] == 0) && (mMaininf.mUart5.ReceiveBuf[1] == 1) &&
+			   (mMaininf.mUart5.ReceiveBuf[2] == 0))
 			{
-				api_UART5_Display_SendCMDData(0,0,1);
+				api_UART5_Display_SendCMDData(0,1,1);
 				mMaininf.mWork.mWorkInitFlag = 1;
+				vTaskDelay(50);
 				break;
 			}
 		}
@@ -615,7 +620,8 @@ void api_MachinePowerOn(void)
 			mMaininf.mWork.mWorkInitFlag = 0;
 			break;
 		}
-	}*/
+	}
+	#endif
 }
 
 /*****************************************************************************

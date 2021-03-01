@@ -348,7 +348,7 @@
             <uSurpInc>0</uSurpInc>
             <VariousControls>
               <MiscControls>--C99</MiscControls>
-              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER,zbq_Debug</Define>
+              <Define>STM32F10X_HD,USE_STDPERIPH_DRIVER</Define>
               <Undefine></Undefine>
               <IncludePath>.\FreeRTOS;.\FreeRTOS\Include;.\FreeRTOS\Portable;.\FunLib;.\Lib\CMSIS;.\Lib\CMSIS\STM32F10x;.\Lib\CMSIS\STM32F10x\startup;.\Lib\STM32F10x_StdPeriph_Driver\inc;.\Project;.\TaskManager;.\Project\log\inc;.\Project\log\port</IncludePath>
             </VariousControls>
@@ -615,6 +615,11 @@
               <FileName>eeprom.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\Project\eeprom.c</FilePath>
+            </File>
+            <File>
+              <FileName>myprint.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\Project\myprint.c</FilePath>
             </File>
           </Files>
         </Group>

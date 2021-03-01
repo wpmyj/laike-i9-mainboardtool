@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\OBJ\MainBoard.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\OBJ\MainBoard.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 76]: Last Updated: Fri Feb 05 11:58:49 2021
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5.03 [Build 24]: Last Updated: Mon Mar 01 13:01:10 2021
 <BR><P>
 <H3>Maximum Stack Usage =        160 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -596,12 +596,12 @@ Global Symbols
 
 <P><STRONG><a name="[157]"></a>GPIO_StructInit</STRONG> (Thumb, 16 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
 
-<P><STRONG><a name="[c2]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerDetection
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_Wheel_PWM
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM_One
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ReadWheelGpioInputStauts
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ReadGpioInputStauts
+<P><STRONG><a name="[c3]"></a>GPIO_ReadInputDataBit</STRONG> (Thumb, 18 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerDetection
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_Wheel_PWM
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM_One
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ReadWheelGpioInputStauts
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ReadGpioInputStauts
 </UL>
 
 <P><STRONG><a name="[158]"></a>GPIO_ReadInputData</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, stm32f10x_gpio.o(.text), UNUSED)
@@ -647,7 +647,7 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IWDG_Configure
 </UL>
 
-<P><STRONG><a name="[cc]"></a>IWDG_ReloadCounter</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f10x_iwdg.o(.text))
+<P><STRONG><a name="[cd]"></a>IWDG_ReloadCounter</STRONG> (Thumb, 10 bytes, Stack size 0 bytes, stm32f10x_iwdg.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TimerController
 </UL>
@@ -846,14 +846,14 @@ Global Symbols
 
 <P><STRONG><a name="[17a]"></a>TIM_BDTRStructInit</STRONG> (Thumb, 40 bytes, Stack size 0 bytes, stm32f10x_tim.o(.text), UNUSED)
 
-<P><STRONG><a name="[c0]"></a>TIM_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_tim.o(.text))
+<P><STRONG><a name="[c1]"></a>TIM_Cmd</STRONG> (Thumb, 24 bytes, Stack size 0 bytes, stm32f10x_tim.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[105]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM1_PWM_Configure
 <LI><a href="#[f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM4_Configure
 <LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM3_Configure
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_Configure
-<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_Wheel_PWM
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM_One
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Send_Signal
+<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_Wheel_PWM
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM_One
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Send_Signal
 </UL>
 
 <P><STRONG><a name="[108]"></a>TIM_CtrlPWMOutputs</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, stm32f10x_tim.o(.text), UNUSED)
@@ -1160,8 +1160,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[87]"></a>vPortEnterCritical</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, port.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_Wheel_PWM
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM_One
+<BR><BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_Wheel_PWM
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM_One
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskNotifyStateClear
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGenericNotify
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskNotifyWait
@@ -1179,8 +1179,8 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[89]"></a>vPortExitCritical</STRONG> (Thumb, 28 bytes, Stack size 0 bytes, port.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_Wheel_PWM
-<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM_One
+<BR><BR>[Called By]<UL><LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_Wheel_PWM
+<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM_One
 <LI><a href="#[ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskNotifyStateClear
 <LI><a href="#[aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskGenericNotify
 <LI><a href="#[a9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;xTaskNotifyWait
@@ -1350,10 +1350,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_MainBoard_Version
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TimerController
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Test_ADC
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ReadWheelGpioInputStauts
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ReadGpioInputStauts
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Test_ADC
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ReadWheelGpioInputStauts
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ReadGpioInputStauts
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_MachinePowerOn
 </UL>
 
 <P><STRONG><a name="[97]"></a>uxTaskPriorityGet</STRONG> (Thumb, 30 bytes, Stack size 16 bytes, tasks.o(.text), UNUSED)
@@ -1492,10 +1493,11 @@ Global Symbols
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
 
-<P><STRONG><a name="[cd]"></a>api_GetSystemTimePeriod</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, apilib.o(.text))
+<P><STRONG><a name="[bf]"></a>api_GetSystemTimePeriod</STRONG> (Thumb, 30 bytes, Stack size 0 bytes, apilib.o(.text))
 <BR><BR>[Called By]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_SendCMD_To_MainBoard
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_SendCMD_To_Display
 <LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TimerController
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_MachinePowerOn
 </UL>
 
 <P><STRONG><a name="[be]"></a>api_GetCurrentSystemTime</STRONG> (Thumb, 6 bytes, Stack size 0 bytes, apilib.o(.text))
@@ -1539,6 +1541,7 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;USART_ITConfig
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
+<LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_MainBoard_Version
 <LI><a href="#[b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_UART4_ReceiveData
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_UART4_DEBUG_SendCMDData
 </UL>
@@ -1581,6 +1584,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_SendCMD_To_Display
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_MachinePowerOn
 </UL>
 
 <P><STRONG><a name="[bc]"></a>api_ClearUART5ReceiveFlag</STRONG> (Thumb, 20 bytes, Stack size 0 bytes, apilib.o(.text))
@@ -1595,14 +1599,21 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[3f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART5_IRQHandler
 </UL>
 
-<P><STRONG><a name="[bd]"></a>api_MachinePowerOn</STRONG> (Thumb, 12 bytes, Stack size 4 bytes, apilib.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_GetCurrentSystemTime
+<P><STRONG><a name="[bd]"></a>api_MachinePowerOn</STRONG> (Thumb, 152 bytes, Stack size 8 bytes, apilib.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = api_MachinePowerOn &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
+</UL>
+<BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_UART5_Display_SendCMDData
+<LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_GetCurrentSystemTime
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_GetSystemTimePeriod
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
+</UL>
+<BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
 </UL>
 
-<P><STRONG><a name="[bf]"></a>api_Send_Signal</STRONG> (Thumb, 1388 bytes, Stack size 16 bytes, apilib.o(.text))
+<P><STRONG><a name="[c0]"></a>api_Send_Signal</STRONG> (Thumb, 1360 bytes, Stack size 16 bytes, apilib.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = api_Send_Signal
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
+<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
 </UL>
@@ -1611,52 +1622,52 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
 </UL>
 
-<P><STRONG><a name="[c1]"></a>api_ReadGpioInputStauts</STRONG> (Thumb, 68 bytes, Stack size 32 bytes, apilib.o(.text))
+<P><STRONG><a name="[c2]"></a>api_ReadGpioInputStauts</STRONG> (Thumb, 68 bytes, Stack size 32 bytes, apilib.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = api_ReadGpioInputStauts &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
 </UL>
 
-<P><STRONG><a name="[c3]"></a>api_ReadWheelGpioInputStauts</STRONG> (Thumb, 62 bytes, Stack size 32 bytes, apilib.o(.text))
+<P><STRONG><a name="[c4]"></a>api_ReadWheelGpioInputStauts</STRONG> (Thumb, 62 bytes, Stack size 32 bytes, apilib.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = api_ReadWheelGpioInputStauts &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
 </UL>
 
-<P><STRONG><a name="[c4]"></a>api_Check_PWM_One</STRONG> (Thumb, 170 bytes, Stack size 32 bytes, apilib.o(.text))
+<P><STRONG><a name="[c5]"></a>api_Check_PWM_One</STRONG> (Thumb, 170 bytes, Stack size 32 bytes, apilib.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = api_Check_PWM_One
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
-<BR>[Called By]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM
+<BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM
 </UL>
 
-<P><STRONG><a name="[c5]"></a>api_Check_PWM</STRONG> (Thumb, 76 bytes, Stack size 32 bytes, apilib.o(.text))
+<P><STRONG><a name="[c6]"></a>api_Check_PWM</STRONG> (Thumb, 76 bytes, Stack size 32 bytes, apilib.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = api_Check_PWM &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM_One
+<BR>[Calls]<UL><LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM_One
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
 </UL>
 
-<P><STRONG><a name="[c6]"></a>api_Check_Wheel_PWM</STRONG> (Thumb, 170 bytes, Stack size 32 bytes, apilib.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
-<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<P><STRONG><a name="[c7]"></a>api_Check_Wheel_PWM</STRONG> (Thumb, 258 bytes, Stack size 32 bytes, apilib.o(.text), UNUSED)
+<BR><BR>[Calls]<UL><LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
+<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortExitCritical
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vPortEnterCritical
 </UL>
 
-<P><STRONG><a name="[c7]"></a>api_Test_ADC</STRONG> (Thumb, 158 bytes, Stack size 24 bytes, apilib.o(.text))
+<P><STRONG><a name="[c8]"></a>api_Test_ADC</STRONG> (Thumb, 76 bytes, Stack size 24 bytes, apilib.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 80<LI>Call Chain = api_Test_ADC &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
 <BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
@@ -1672,27 +1683,27 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
 </UL>
 
-<P><STRONG><a name="[c9]"></a>NumToChar</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, apilib.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ShortToStr
+<P><STRONG><a name="[ca]"></a>NumToChar</STRONG> (Thumb, 66 bytes, Stack size 0 bytes, apilib.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ShortToStr
 </UL>
 
-<P><STRONG><a name="[c8]"></a>api_ShortToStr</STRONG> (Thumb, 144 bytes, Stack size 20 bytes, apilib.o(.text))
+<P><STRONG><a name="[c9]"></a>api_ShortToStr</STRONG> (Thumb, 144 bytes, Stack size 20 bytes, apilib.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 20<LI>Call Chain = api_ShortToStr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NumToChar
+<BR>[Calls]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NumToChar
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
 </UL>
 
-<P><STRONG><a name="[cb]"></a>Key_Status_Analyze</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, tk_timercontroller.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerDetection
+<P><STRONG><a name="[cc]"></a>Key_Status_Analyze</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, tk_timercontroller.o(.text))
+<BR><BR>[Called By]<UL><LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerDetection
 </UL>
 
-<P><STRONG><a name="[ca]"></a>TimerDetection</STRONG> (Thumb, 390 bytes, Stack size 8 bytes, tk_timercontroller.o(.text))
+<P><STRONG><a name="[cb]"></a>TimerDetection</STRONG> (Thumb, 390 bytes, Stack size 8 bytes, tk_timercontroller.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = TimerDetection
 </UL>
-<BR>[Calls]<UL><LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
-<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Status_Analyze
+<BR>[Calls]<UL><LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_ReadInputDataBit
+<LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_Status_Analyze
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TimerController
 </UL>
@@ -1700,20 +1711,20 @@ Global Symbols
 <P><STRONG><a name="[4b]"></a>TK_TimerController</STRONG> (Thumb, 50 bytes, Stack size 0 bytes, tk_timercontroller.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 56<LI>Call Chain = TK_TimerController &rArr; vTaskDelay &rArr; xTaskResumeAll &rArr; xTaskIncrementTick
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IWDG_ReloadCounter
-<LI><a href="#[ca]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerDetection
+<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IWDG_ReloadCounter
+<LI><a href="#[cb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TimerDetection
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_GetCurrentSystemTime
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_GetSystemTimePeriod
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_GetSystemTimePeriod
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> main.o(.text)
 </UL>
-<P><STRONG><a name="[ce]"></a>api_SendCMD_To_Display</STRONG> (Thumb, 138 bytes, Stack size 32 bytes, tk_testcontroller.o(.text))
+<P><STRONG><a name="[ce]"></a>api_SendCMD_To_Display</STRONG> (Thumb, 144 bytes, Stack size 32 bytes, tk_testcontroller.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 84<LI>Call Chain = api_SendCMD_To_Display &rArr; api_UART5_Display_SendCMDData &rArr; api_UART5_SendData &rArr; USART_ITConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_UART5_Display_SendCMDData
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_GetCurrentSystemTime
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_GetSystemTimePeriod
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_GetSystemTimePeriod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
 </UL>
@@ -1723,36 +1734,38 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_UART1_MainBoard_SendCMDData
 <LI><a href="#[be]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_GetCurrentSystemTime
-<LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_GetSystemTimePeriod
+<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_GetSystemTimePeriod
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_MainBoard_Version
 </UL>
 
-<P><STRONG><a name="[d0]"></a>Check_MainBoard_Version</STRONG> (Thumb, 224 bytes, Stack size 24 bytes, tk_testcontroller.o(.text))
+<P><STRONG><a name="[d0]"></a>Check_MainBoard_Version</STRONG> (Thumb, 398 bytes, Stack size 24 bytes, tk_testcontroller.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = Check_MainBoard_Version &rArr; api_SendCMD_To_MainBoard &rArr; api_UART1_MainBoard_SendCMDData &rArr; api_UART1_SendData &rArr; USART_ITConfig
 </UL>
 <BR>[Calls]<UL><LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_SendCMD_To_MainBoard
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_UART4_SendData
 <LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;vTaskDelay
 </UL>
 <BR>[Called By]<UL><LI><a href="#[4c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TK_TestController
 </UL>
 
-<P><STRONG><a name="[4c]"></a>TK_TestController</STRONG> (Thumb, 13664 bytes, Stack size 16 bytes, tk_testcontroller.o(.text))
+<P><STRONG><a name="[4c]"></a>TK_TestController</STRONG> (Thumb, 11222 bytes, Stack size 16 bytes, tk_testcontroller.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = TK_TestController &rArr; Check_MainBoard_Version &rArr; api_SendCMD_To_MainBoard &rArr; api_UART1_MainBoard_SendCMDData &rArr; api_UART1_SendData &rArr; USART_ITConfig
 </UL>
-<BR>[Calls]<UL><LI><a href="#[cc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IWDG_ReloadCounter
+<BR>[Calls]<UL><LI><a href="#[cd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IWDG_ReloadCounter
 <LI><a href="#[d0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check_MainBoard_Version
 <LI><a href="#[cf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_SendCMD_To_MainBoard
 <LI><a href="#[ce]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_SendCMD_To_Display
-<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ShortToStr
+<LI><a href="#[c9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ShortToStr
 <LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_MainBoard_Mode
-<LI><a href="#[c7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Test_ADC
-<LI><a href="#[c5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM
-<LI><a href="#[c3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ReadWheelGpioInputStauts
-<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ReadGpioInputStauts
+<LI><a href="#[c8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Test_ADC
+<LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Check_PWM
+<LI><a href="#[c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ReadWheelGpioInputStauts
+<LI><a href="#[c2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_ReadGpioInputStauts
 <LI><a href="#[d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Control_Motor
-<LI><a href="#[bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Send_Signal
+<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_Send_Signal
+<LI><a href="#[bd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_MachinePowerOn
 <LI><a href="#[ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_UART5_Display_SendCMDData
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_UART4_DEBUG_SendCMDData
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;api_UART4_SendData
@@ -1815,13 +1828,13 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Init
 </UL>
 
-<P><STRONG><a name="[1d3]"></a>Systick_Configure</STRONG> (Thumb, 92 bytes, Stack size 12 bytes, bsp.o(.text), UNUSED)
+<P><STRONG><a name="[1d3]"></a>Systick_Configure</STRONG> (Thumb, 88 bytes, Stack size 12 bytes, bsp.o(.text), UNUSED)
 
 <P><STRONG><a name="[eb]"></a>TIM2_Configure</STRONG> (Thumb, 86 bytes, Stack size 24 bytes, bsp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = TIM2_Configure &rArr; NVIC_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ITConfig
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TimeBaseInit
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
 </UL>
@@ -1832,7 +1845,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = TIM3_Configure &rArr; NVIC_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ITConfig
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TimeBaseInit
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
 </UL>
@@ -1843,7 +1856,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = TIM4_Configure &rArr; NVIC_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[ee]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_ITConfig
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TimeBaseInit
 <LI><a href="#[ed]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;NVIC_Init
 </UL>
@@ -1906,7 +1919,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;BSP_Init
 </UL>
 
-<P><STRONG><a name="[f7]"></a>ADC1_Configure</STRONG> (Thumb, 344 bytes, Stack size 72 bytes, bsp.o(.text))
+<P><STRONG><a name="[f7]"></a>ADC1_Configure</STRONG> (Thumb, 340 bytes, Stack size 72 bytes, bsp.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 96<LI>Call Chain = ADC1_Configure &rArr; GPIO_Init
 </UL>
 <BR>[Calls]<UL><LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RCC_APB2PeriphClockCmd
@@ -1931,7 +1944,7 @@ Global Symbols
 <P><STRONG><a name="[105]"></a>TIM1_PWM_Configure</STRONG> (Thumb, 148 bytes, Stack size 48 bytes, bsp.o(.text), UNUSED)
 <BR><BR>[Calls]<UL><LI><a href="#[107]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC2PreloadConfig
 <LI><a href="#[108]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_CtrlPWMOutputs
-<LI><a href="#[c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
+<LI><a href="#[c1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_Cmd
 <LI><a href="#[106]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_OC2Init
 <LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM_TimeBaseInit
 <LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GPIO_PinRemapConfig

@@ -8,10 +8,12 @@
 
 /* Includes --------------------------------------------------------------------*/
 #include "stm32f10x.h"
+#include <stdio.h>
 
 /* Project ---------------------------------------------------------------------*/
 #include "maindef.h"
 #include "apiLib.h"
+#include "myprint.h"
 #include "TK_TestController.h"
 
 
@@ -23,7 +25,7 @@ u8 ssss[32];
 
 /* Function --------------------------------------------------------------------*/
 void TK_TestController( void *pvParameters );
-void api_SendCMD_To_Display(u8 mode,u8 cmd,u8 status, u16 time,u8 count);
+u8 api_SendCMD_To_Display(u8 mode,u8 cmd,u8 status, u16 waittime,u8 count);
 u8 api_SendCMD_To_MainBoard(u8 seq,u8 mode,u8 cmd,u16 waittime,u8 type,u8 num,u8 status);
 u8 Check_MainBoard_Version(void);
 
@@ -39,7 +41,8 @@ u8 Check_MainBoard_Version(void);
 u8 sssss = 0;
 void TK_TestController( void *pvParameters )
 {
-	//api_MachinePowerOn();
+	api_MachinePowerOn();
+	
 	for(;;)
 	{
 		IWDG_ReloadCounter();
@@ -124,10 +127,6 @@ void TK_TestController( void *pvParameters )
 			if(mMaininf.mWork.mWorkStep != mMaininf.mWork.mWorkStepOld)
 			{
 				mMaininf.mWork.mWorkStepOld = mMaininf.mWork.mWorkStep;
-			//	mMaininf.mWork.mWorkStep = TEST_TOF_POWER;
-				
-				//api_UART4_DEBUG_SendCMDData(1,mMaininf.mWork.mWorkStep,1);
-				//vTaskDelay(1000);
 				
 				switch(mMaininf.mWork.mWorkStep)
 				{
@@ -138,6 +137,7 @@ void TK_TestController( void *pvParameters )
 						vTaskDelay(2000);
 						PEout(1) = 1;
 						api_UART4_SendData(32,xMainBoardVersion);
+						//printd("gongzhuang = %s", xMainBoardVersion);
 						vTaskDelay(4500);
 						mMaininf.mWork.mWorkReadErrorFlag = 0;
 					
@@ -2311,15 +2311,21 @@ void TK_TestController( void *pvParameters )
 		{
 			if(api_Check_MainBoard_Mode() == 0)
 			{
-				mMaininf.mWork.mWorkOldI8I9StatusFlag = mMaininf.mWork.mWorkI8I9StatusFlag;
+				//mMaininf.mWork.mWorkOldI8I9StatusFlag = mMaininf.mWork.mWorkI8I9StatusFlag;
 				
 				if(mMaininf.mWork.mWorkI8I9StatusFlag == 1)//i8
 				{
-					api_SendCMD_To_Display(2,2,1,1000,3);
+					if(api_SendCMD_To_Display(2,2,1,1000,3) == 1)
+					{
+						mMaininf.mWork.mWorkOldI8I9StatusFlag = mMaininf.mWork.mWorkI8I9StatusFlag;
+					}
 				}
 				else if(mMaininf.mWork.mWorkI8I9StatusFlag == 2)//i9
 				{
-					api_SendCMD_To_Display(2,3,1,1000,3);
+					if(api_SendCMD_To_Display(2,3,1,1000,3) == 1)
+					{
+						mMaininf.mWork.mWorkOldI8I9StatusFlag = mMaininf.mWork.mWorkI8I9StatusFlag;
+					}
 				}
 			}
 		}
@@ -2328,14 +2334,14 @@ void TK_TestController( void *pvParameters )
 }
 
 /*****************************************************************************
- * @name       :void api_SendCMD_To_Display(u8 mode,u8 cmd,u8 status)
+ * @name       :u8 api_SendCMD_To_Display(u8 mode,u8 cmd,u8 status, u16 waittime,u8 count)
  * @date       :2020-09-19 
  * @author     :zhengbaiqiu 
  * @function   :send data
  * @parameters :cmd
  * @retvalue   :None
 ******************************************************************************/
-void api_SendCMD_To_Display(u8 mode,u8 cmd,u8 status, u16 waittime,u8 count)
+u8 api_SendCMD_To_Display(u8 mode,u8 cmd,u8 status, u16 waittime,u8 count)
 {
 	u8 mCont = 0;
 	u8 mStatus = 0;
@@ -2344,7 +2350,7 @@ void api_SendCMD_To_Display(u8 mode,u8 cmd,u8 status, u16 waittime,u8 count)
 	{
 		if(++mCont > count)
 		{
-			return;
+			return 0;
 		}
 		
 		api_UART5_Display_SendCMDData(mode,cmd,status);
@@ -2364,7 +2370,9 @@ void api_SendCMD_To_Display(u8 mode,u8 cmd,u8 status, u16 waittime,u8 count)
 		
 	}while(mStatus == 0);
 	
-	//mMaininf.mUart5.mReceiveFlag = 0;
+	mMaininf.mUart5.mReceiveFlag = 0;
+	
+	return 1;//接收到数据
 	
 }
 
@@ -2377,7 +2385,6 @@ void api_SendCMD_To_Display(u8 mode,u8 cmd,u8 status, u16 waittime,u8 count)
 				type:类型0：状态  1：数据     num:重发次数   status:检测返回状态  0：检测返回0   1：检测返回1
  * @retvalue   :0:主板无数据返回     1：主板有数据返回
 ******************************************************************************/
-u8 iii;
 u8 api_SendCMD_To_MainBoard(u8 seq,u8 mode,u8 cmd,u16 waittime,u8 type,u8 num,u8 status)
 {
 	u8 mCont = 0;
@@ -2408,12 +2415,7 @@ u8 api_SendCMD_To_MainBoard(u8 seq,u8 mode,u8 cmd,u16 waittime,u8 type,u8 num,u8
 			}
 			mMaininf.mUart1.mReceiveFlag = 0;
 			
-// 			#ifndef zbq_Debug
-// 			api_UART4_SendData(10,"tmep54-1\r\n");
-// 			vTaskDelay(200);
-// 			#endif
 		}while(mStatus == 0);
-		//}while((mMaininf.mUart1.mReceiveFlag == 0) || ((mMaininf.mUart1.mReceiveFlag == 1) && (mMaininf.mUart1.ReceiveBuf[4] == 0)));
 		
 	}
 	else
@@ -2459,6 +2461,9 @@ u8 Check_MainBoard_Version(void)
 		
 		if(api_SendCMD_To_MainBoard(0,1,2,500,1,5,1) == 1)
 		{
+			//printd("mainboard = %s", mMaininf.mUart1.ReceiveBuf[mMaininf.mWork.mWorkReadErrorCont + 4]);
+			api_UART4_SendData(16,&mMaininf.mUart1.ReceiveBuf[mMaininf.mWork.mWorkReadErrorCont + 4]);
+			
 			for(mMaininf.mWork.mWorkReadErrorCont = 0;mMaininf.mWork.mWorkReadErrorCont < 8;mMaininf.mWork.mWorkReadErrorCont++)
 			{
 				if(mMaininf.mWork.mWorkI8I9StatusFlag == 1)
@@ -2471,17 +2476,17 @@ u8 Check_MainBoard_Version(void)
 				}
 			}
 			
-//			for(mMaininf.mWork.mWorkReadErrorCont = 0;mMaininf.mWork.mWorkReadErrorCont < 4;mMaininf.mWork.mWorkReadErrorCont++)
-//			{
-//				if(mMaininf.mWork.mWorkI8I9StatusFlag == 1)
-//				{
-//					mMaininf.mWork.mWorkReadErrorFlag = mMaininf.mWork.mWorkReadErrorFlag | (mMaininf.mUart1.ReceiveBuf[mMaininf.mWork.mWorkReadErrorCont + 16] != xMainBoardVersion[mMaininf.mWork.mWorkReadErrorCont + 12]);
-//				}
-//				else
-//				{
-//					mMaininf.mWork.mWorkReadErrorFlag = mMaininf.mWork.mWorkReadErrorFlag | (mMaininf.mUart1.ReceiveBuf[mMaininf.mWork.mWorkReadErrorCont + 16] != xMainBoardVersion[mMaininf.mWork.mWorkReadErrorCont + 28]);
-//				}
-//			}
+			for(mMaininf.mWork.mWorkReadErrorCont = 0;mMaininf.mWork.mWorkReadErrorCont < 4;mMaininf.mWork.mWorkReadErrorCont++)
+			{
+				if(mMaininf.mWork.mWorkI8I9StatusFlag == 1)
+				{
+					mMaininf.mWork.mWorkReadErrorFlag = mMaininf.mWork.mWorkReadErrorFlag | (mMaininf.mUart1.ReceiveBuf[mMaininf.mWork.mWorkReadErrorCont + 16] != xMainBoardVersion[mMaininf.mWork.mWorkReadErrorCont + 12]);
+				}
+				else
+				{
+					mMaininf.mWork.mWorkReadErrorFlag = mMaininf.mWork.mWorkReadErrorFlag | (mMaininf.mUart1.ReceiveBuf[mMaininf.mWork.mWorkReadErrorCont + 16] != xMainBoardVersion[mMaininf.mWork.mWorkReadErrorCont + 28]);
+				}
+			}
 			
 			if(mMaininf.mWork.mWorkReadErrorFlag == 0)
 			{
